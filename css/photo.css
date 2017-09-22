@@ -1,0 +1,70 @@
+.photo{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: 30vh;
+    right: 0;
+    left:0;
+    background-color: red;
+    transform:translateZ(130px);
+    margin: auto;
+    perspective:1000px;
+}
+.content{   
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    float: left;
+    margin-right:60px;
+    transform-origin: 50%;
+    animation: slide 8s linear infinite;
+}
+.content ul{
+    list-style: none;
+}
+.content ul li{
+    width: 250px;
+    height: 250px;
+    border:5px solid #FE98D9;
+    position: absolute;
+}
+.content ul li img{
+    width: 245px;
+    height:245px;
+}
+
+.content ul li:nth-child(1){
+    transform: rotateY(0deg) translateZ(260px);
+}
+.content ul li:nth-child(2){
+    transform: rotateY(60deg) translateZ(260px);
+}
+.content ul li:nth-child(3){
+    transform: rotateY(120deg) translateZ(260px);
+}
+.content ul li:nth-child(4){
+    transform: rotateY(180deg) translateZ(260px);
+}
+.content ul li:nth-child(5){
+    transform: rotateY(240deg) translateZ(260px);
+}
+.content ul li:nth-child(6){
+    transform: rotateY(300deg) translateZ(260px);
+}
+
+@keyframes slide{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+.content:hover{
+    animation-play-state: paused;
+}
+
+.content url li:hover{
+    transform: scale(1.2);
+    border: 5px solid rgba(255,255,255,.2);
+}
