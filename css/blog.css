@@ -41,6 +41,81 @@
     border-radius:0% 0 0 50%;
     animation-fill-mode: forwards;
 }
+.wrapCont>pre{
+    width:65vw;
+    height:60vh;
+    font-size:3vh;
+    position: fixed;
+    top: 15vh;
+    animation: contPre 4s;
+    animation-fill-mode: forwards;   
+    font-weight: bold;
+    font-family: cursive; 
+}
+
+.pStyle1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:6vh;
+    color:#0066FF;
+    padding:0 1vw;
+    font-style: italic;
+
+   
+}
+.pStyle2{
+    font-family:Courier New, Courier, monospace;
+    font-size:5.5vh;
+    color:#990099;
+    padding:0 1vw;
+    font-weight: bolder;
+   
+}
+.pStyle3{
+    font-family:Courier New, Courier, monospace;
+    font-size:7vh;
+    color:#CC0033;
+    padding:0 1vw;
+    font-weight: bolder;
+   
+}
+.pStyle4{
+    font-family:cursive;
+    font-size:9vh;
+    color:#00CC44;
+    padding:0 1vw;
+    
+   
+}
+.pStyle5{
+    font-family:cursive;
+    font-size:6vh;
+    color:#FF33CC;
+    padding:0 1vw;
+    font-style: oblique;
+   
+}
+.pStyle6{
+    font-family:Courier New, Courier, monospace;
+    font-size:7vh;
+    color:#5F6600;
+    padding:0 1vw;
+   
+}
+.pStyle7{
+    font-family:Courier New, Courier, monospace;
+    font-size:4vh;
+    color:#33FF33;
+    
+   
+}
+.pStyle8{
+    font-family:'Times New Roman', Times, serif;
+    font-size:3.5vh;
+    color:#666666;
+    line-height: 8vh;
+
+   
+}
 .wrapMenu:hover{
     background-color: rgba(255, 255, 255, 0.76);
     color:#8BB91F;
@@ -54,7 +129,7 @@
     to{
         left:20vw;
         position: fixed;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.64);
     }
 }
 @-moz-keyframes contentIn{
@@ -64,7 +139,7 @@
     to{
         left:20vw;
         position: fixed;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.64);
     }
 }
 @-webkit-keyframes contentIn{
@@ -74,7 +149,7 @@
     to{
         left:20vw;
         position: fixed;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.64);
     }
 }
 @-o-keyframes contentIn{
@@ -82,9 +157,49 @@
         left:100vw;
     }
     to{
-        left:28vw;
+        left:20vw;
         position: fixed;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.64);
+    }
+}
+@keyframes contPre{
+    from{
+        left:100vw;
+    }
+    to{
+        left:18vw;
+        position: fixed;
+       
+    }
+}
+@-moz-keyframes contPre{
+    from{
+        left:100vw;
+    }
+    to{
+        left:18vw;
+        position: fixed;
+        
+    }
+}
+@-webkit-keyframes contPre{
+    from{
+        left:100vw;
+    }
+    to{
+        left:18vw;
+        position: fixed;
+       
+    }
+}
+@-o-keyframes contPre{
+    from{
+        left:100vw;
+    }
+    to{
+        left:18vw;
+        position: fixed;
+        
     }
 }
 @keyframes initAnm{

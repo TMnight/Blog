@@ -1,20 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapPhoto{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/timg.jpg');
+    background-size: 100vw 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    opacity:0.5;
+    filter: opacity(50);
+    
+}
 .photo{
-    width: 250px;
-    height: 250px;
+    width:35vh;
+    height:35vh;
     position: absolute;
-    bottom: 30vh;
+    bottom:45vh;
     right: 0;
     left:0;
-    transform:translateZ(130px);
+    transform:translateZ(30vw);
     margin: auto;
-    perspective:1000px;
+    perspective:100vw;
+    
+    
 }
 .content{   
-    width: 250px;
-    height: 250px;
+    width: 35vh;
+    height:35vh;
     transform-style: preserve-3d;
     float: left;
-    margin-right:60px;
+    margin-right:5vh;
     transform-origin: 50%;
     animation: slide 8s linear infinite;
 }
@@ -22,33 +41,34 @@
     list-style: none;
 }
 .content ul li{
-    width: 250px;
-    height: 250px;
-    border:5px solid #FE98D9;
+    width:35vh;
+    height: 35vh;
+    border:0.5vh solid #FAFA79;
     position: absolute;
 }
 .content ul li img{
-    width: 240px;
-    height:240px;
+    width:34vh;
+    height:34vh;
+    -webkit-box-reflect: below 0.5vh -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent) , to(rgba(250, 250, 250, 0.3)));
 }
 
 .content ul li:nth-child(1){
-    transform: rotateY(0deg) translateZ(260px);
+    transform: rotateY(0deg) translateZ(30vw);
 }
 .content ul li:nth-child(2){
-    transform: rotateY(60deg) translateZ(260px);
+    transform: rotateY(60deg) translateZ(30vw);
 }
 .content ul li:nth-child(3){
-    transform: rotateY(120deg) translateZ(260px);
+    transform: rotateY(120deg) translateZ(30vw);
 }
 .content ul li:nth-child(4){
-    transform: rotateY(180deg) translateZ(260px);
+    transform: rotateY(180deg) translateZ(30vw);
 }
 .content ul li:nth-child(5){
-    transform: rotateY(240deg) translateZ(260px);
+    transform: rotateY(240deg) translateZ(30vw);
 }
 .content ul li:nth-child(6){
-    transform: rotateY(300deg) translateZ(260px);
+    transform: rotateY(300deg) translateZ(30vw);
 }
 
 @keyframes slide{
@@ -66,4 +86,32 @@
 .content url li:hover{
     transform: scale(1.2);
     border: 5px solid rgba(255,255,255,.2);
+    cursor: pointer;
 }
+/* 图片菜单 */
+.photo-menu{
+    width: 100%;
+    height:10vh;
+    position: fixed;
+    top:90vh;
+    
+   
+}
+.photo-menu ul{
+    width:100%;
+    line-height: 10vh;
+    list-style-type: none;
+    text-align: center;
+}
+.photo-menu li{
+    width:12.5%;
+    line-height:10vh;
+    float: left;
+    font-size:3vh;
+    color:#585656;
+    text-align: center;
+    border-top: 1vh solid rgba(250, 250, 121, 0.6);
+    background-color:rgba(255, 255, 255, 0.47) ;
+}
+
+
