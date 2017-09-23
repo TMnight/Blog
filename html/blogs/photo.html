@@ -7,6 +7,34 @@
     <title>Photo</title>
    
     <link rel="stylesheet" href="../../css/photo.css">
+    <link rel="stylesheet" href="../../framework/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var timer = null;
+        var right = $($(".photo-menu").find("div")[0]).css("right").slice(0,-2);
+        $(".photo-menu").mouseenter(function(){
+            clearTimeout(timer);
+            var that= $(this);
+            timer = setTimeout(function(){
+                that.find("div").each(function(index,ele){
+                    setTimeout(function(){
+                        $(ele).stop().animate({right:0},200);
+                    },50*index);
+                })
+            },200)
+        }).mouseleave(function(){
+            if(timer){
+                clearTimeout(timer);
+                $(this).find("div").each(function(index,ele){
+                    setTimeout(function(){
+                        $(ele).stop().animate({right:right},200);
+                    },50*index)
+                })
+            }
+        })
+    })
+    </script>
 </head>
 <body>
     <div class="wrapPhoto"></div> 
@@ -19,21 +47,19 @@
             <li><img src="../../images/4.jpg"/></li>
             <li><img src="../../images/5.jpg"/></li>
             <li><img src="../../images/6.jpg"/></li>
+            <li class="center"></li>
         </ul>
         </div>
     </div>
     <div class="photo-menu">
-        <ul>
-            <li>主页</li>
-            <li>个人信息</li>
-            <li>日志</li>
-            <li>图片</li>
-            <li>文章</li>
-            <li>笔记</li>
-            <li>音乐</li>
-            <li>视频</li>
-        </ul>
+            <div class="wrapMenu Menu1"><i class="fa fa-home" aria-hidden="true"></i>主页</div>
+            <div class="wrapMenu Menu2"><i class="fa fa-user-o" aria-hidden="true"></i>个人信息</div>
+            <div class="wrapMenu Menu3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>日志</div>
+            <div class="wrapMenu Menu4"><i class="fa fa-picture-o" aria-hidden="true"></i>图片</div>
+            <div class="wrapMenu Menu5"><i class="fa fa-file-text-o" aria-hidden="true"></i>文章</div>
+            <div class="wrapMenu Menu6"><i class="fa fa-pencil" aria-hidden="true"></i>笔记</div>
+            <div class="wrapMenu Menu7"><i class="fa fa-music" aria-hidden="true"></i>音乐</div>
+            <div class="wrapMenu Menu8"><i class="fa fa-video-camera" aria-hidden="true"></i>视频</div>
     </div>
-   
 </body>
 </html>
